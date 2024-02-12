@@ -1,0 +1,371 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.mainContainer{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(67, 40, 40);
+    display: flex;
+}
+.main-left{
+    position: relative;
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    align-items: center;
+    overflow: hidden;
+}
+.logo{
+    position: absolute;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 6rem;
+    color: white;
+    text-shadow: 0px 0px 5px red,
+                 0px 0px 10px red;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 85vh;
+    margin-right: 50vw;
+    transition-duration: 1.2s;
+}
+.logo2{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    margin-left: 110px;
+    margin-top: 85px;
+    transition-duration: 1.2s;
+}
+.logo:hover + .logo2{
+    color: white;
+    transition-duration: 1.2s;
+}
+.logo:hover{
+    color: red;
+    transition-duration: 1.2s;
+    text-shadow: 0px 0px 5px white,
+                 0px 0px 10px white;
+}
+.left-img{
+    position: absolute;
+    border: 4px solid gold;
+    border-radius: 50%;
+    padding: 4rem;
+    height: 90%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    box-shadow: 0px 0px 5px black,
+                0px 0px 10px black,
+                0px 0px 15px grey,
+                0px 0px 20px red;
+
+
+}
+.quote{
+    position: absolute;
+    background-color: pink;
+    color: rgb(87, 50, 50);
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    opacity: 0;
+    z-index: 5;
+}
+.img1, .quote{
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: 2px solid gold;
+    box-shadow: 0px 0px 5px black,
+                0px 0px 10px black;
+    border-radius: 50%;
+    transition-duration: 3s;
+}
+.main-right{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.right-txtBox1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    margin-top: 100px;
+}
+.happy{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.valen{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.8rem;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: 500;
+
+}
+.para1{
+    font: 0.4rem;
+    width: 80%;
+    opacity: 0.7;
+    padding-bottom: 2rem;
+    color: rgb(255, 235, 235);
+    font-family: 'Playfair Display', serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: 3px groove white;
+}
+.envelope{
+    position: relative;
+    height: 6rem;
+    aspect-ratio: 1/1;
+    z-index: 100;
+}
+.envelope img{
+    height: 10rem;
+    aspect-ratio: 1/1;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+.envelope:hover .img-1{
+    transform: rotate(25deg) scale(1.1);
+    transition-duration: 1.2s;
+}
+.envelope:hover .img-2{
+    transform: rotate(-5deg) scale(1.1);
+    transition-duration: 1.2s;
+}
+.clickme{
+    bottom: 0;
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: yellow;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    margin-left: 60px;
+}
+.img-1{
+    transition-duration: 1.2s;
+    position: absolute;
+    z-index: 1;
+    margin-left: 60px;
+    transform: rotate(25deg);
+}
+.img-2{
+    transition-duration: 1.2s;
+    position: absolute;
+    z-index: 2;
+    transform: rotate(-5deg);
+}
+.note{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 2s;
+    animation-name: easein;
+    animation-duration: 2s;
+}
+.inner-note{
+    height: 80%;
+    width: 40vw;
+    color: white;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid gold;
+    background-color: rgb(245, 87, 59);
+    box-shadow: 0px 0px 5px white,
+                 0px 0px 15px white,
+                 0px 0px 25px white;
+}
+.note-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    text-shadow: 0px 0px 5px gold,
+                 0px 0px 10px gold,
+                 0px 0px 15px gold;
+}
+.note-para{
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    font-weight: 400;
+}
+@keyframes easein {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+@keyframes easeout {
+    from {transform: scale(1);}
+    to {transform: scale(0);}
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media (min-width:501px) and (max-width:1200px){
+    .mainContainer{
+        flex-direction: column;
+        height: 150vh;
+        align-items: center;
+    }
+    .main-left{
+        align-items: center;
+        height: 70vh;
+        width: 100%;
+    }
+    .left-img{
+        height: 70%;
+        aspect-ratio: 1/1;
+        padding: 2rem;
+    }
+    .img1{
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+    .logo2{
+        left: 0;
+        top: 0;
+        margin: 0px;
+        margin-left: 72px;
+        margin-top: 70px;
+    }
+    .logo{
+        left: 0;
+        top: 0;
+        margin: 0px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .main-right{
+        align-items: center;
+        width: 100%;
+        height: 70vh;
+        align-items: center;
+    }
+    .valen{
+        font-size: 2.2rem;
+    }
+    .inner-note{
+        width: 80vw;
+        height: 70vh;
+        margin-top: 60vh;
+    }
+}
+@media (min-width:200px) and (max-width:500px){
+    .mainContainer{
+        flex-direction: column;
+        height: 150vh;
+        width: 100vw;
+        align-items: center;
+    }
+    .main-left{
+        align-items: center;
+        height: 60vh;
+        width: 100vw;
+    }
+    .left-img{
+        height: 18rem;
+        aspect-ratio: 1/1;
+        padding: 2rem;
+    }
+    .img1{
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+    .logo2{
+        left: 0;
+        top: 0;
+        margin: 0px;
+        margin-left: 72px;
+        margin-top: 70px;
+    }
+    .logo{
+        left: 0;
+        top: 0;
+        margin: 0px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .main-right{
+        align-items: center;
+        width: 100vw;
+        height: 70vh;
+        align-items: center;
+    }
+    .valen{
+        font-size: 1.8rem;
+    }
+    .inner-note{
+        width: 90vw;
+        height: 70vh;
+        margin-top: 80vh;
+    }
+    .envelope{
+        margin-top: 100px;
+    }
+    .envelope img{
+        height: 6.8rem;
+    }
+    .note-heading{
+        font-size: 1.8rem;
+        height: 20%;
+    }
+    .note-para{
+        height: 80%;
+        font-size: 1rem;
+    }
+    .clickme{
+        margin-bottom: 80px;
+    }
+}
